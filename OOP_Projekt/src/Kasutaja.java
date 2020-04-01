@@ -16,10 +16,10 @@ public class Kasutaja {
     public void looKasutajanimi (String eesnimi, String perenimi) {
         if (eesnimi.contains("-")) {
             String [] eesnimed = eesnimi.split("-");
-            this.kasutajanimi = eesnimed[0] + perenimi + Math.random() * 100 + 1;
+            this.kasutajanimi = eesnimed[0] + perenimi + (int) (Math.random() * 100 + 1);
         }
         else {
-            this.kasutajanimi = eesnimi + perenimi + Math.random() * 100 + 1;
+            this.kasutajanimi = eesnimi + perenimi + (int) (Math.random() * 100 + 1);
         }
     }
 

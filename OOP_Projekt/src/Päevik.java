@@ -88,6 +88,9 @@ public class Päevik {
             }
             System.out.println("Kuu kokkuvõte on " + hetkeKuuKokkuvõte.stream().mapToDouble(Double::doubleValue).sum() + " eurot.");
         }
+        else {
+            System.out.println("Etteantud kuu, \"" + kuupäev + "\", kohta ei leitud failist andmeid.");
+        }
     }
 
     /**

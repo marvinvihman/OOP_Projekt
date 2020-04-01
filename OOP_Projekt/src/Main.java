@@ -52,8 +52,8 @@ public class Main {
 
         p1.setFailitee("src/" + failitee);
         p1.hetkeKuuKokkuvõte();
-        //p1.lisaPäevikusse("920");
-        //p1.hetkeKuuKokkuvõte();
+        p1.lisaPäevikusse("920");
+        p1.hetkeKuuKokkuvõte();
         p1.kuuKokkuvõte("02-2020");
 
     }

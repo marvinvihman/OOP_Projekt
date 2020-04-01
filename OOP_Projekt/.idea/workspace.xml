@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd00db67-2c0d-4ed5-8163-f3e6c5b9deee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Päevik.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Projekt/Kasutaja.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Projekt/Kasutaja.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Projekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Projekt/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kasutaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasutaja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarvinVihman86.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarvinVihman86.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Päevik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Päevik.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +98,7 @@
       <updated>1583868768474</updated>
       <workItem from="1583868769821" duration="1226000" />
       <workItem from="1584893833583" duration="3355000" />
-      <workItem from="1585748827098" duration="10183000" />
+      <workItem from="1585748827098" duration="15452000" />
     </task>
     <servers />
   </component>

@@ -13,18 +13,17 @@ public class Kasutaja {
         this.kasutajanimi = kasutajanimi;
     }
 
-    public void looKasutajanimi (String eesnimi, String perenimi) {
+    public void looKasutajanimi(String eesnimi, String perenimi) {
         if (eesnimi.contains("-")) {
-            String [] eesnimed = eesnimi.split("-");
+            String[] eesnimed = eesnimi.split("-");
             this.kasutajanimi = eesnimed[0] + perenimi + (int) (Math.random() * 100 + 1);
-        }
-        else {
+        } else {
             this.kasutajanimi = eesnimi + perenimi + (int) (Math.random() * 100 + 1);
         }
     }
 
 
-    public String looFailitee (String kasutajanimi) {
+    public String looFailitee(String kasutajanimi) {
         return kasutajanimi + ".txt";
     }
 }

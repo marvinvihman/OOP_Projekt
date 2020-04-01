@@ -16,6 +16,9 @@ public class Päevik {
     public Päevik() {
     }
 
+    public String getFailitee() {
+        return failitee;
+    }
 
     public void setFailitee(String failitee) {
         this.failitee = failitee;
@@ -56,15 +59,13 @@ public class Päevik {
             bw.write(summa + "\n");
         } else {
             if (sisuAr.isEmpty()) {
-                bw.write("\n" + date.format(formatter) + "\n");
-            } else {
                 bw.write(date.format(formatter) + "\n");
+            } else {
+                bw.write("\n" + date.format(formatter) + "\n");
             }
             bw.write(summa + "\n");
         }
-
         bw.close();
-
     }
 
     /**
@@ -74,22 +75,22 @@ public class Päevik {
      * @throws IOException
      */
     public void kuuKokkuvõte(String kuupäev) throws IOException {
-        List<Double> hetkeKuuKokkuvõte = new ArrayList<Double>();
+        List<Double> kuuKokkuvõte = new ArrayList<Double>();
         List<String> sisuAr = failiSisu();
 
         if (sisuAr.contains(kuupäev)) {
             int i = sisuAr.indexOf(kuupäev);
             System.out.println("\n" + sisuAr.get(i));
-            i++;
-            while (!sisuAr.get(i).equals("")) {
-                System.out.println(sisuAr.get(i));
-                hetkeKuuKokkuvõte.add(Double.parseDouble(sisuAr.get(i)));
+            while (!sisuAr.get(i + 1).equals("")) {
                 i++;
+                if (sisuAr.size() - 1 == i) break;
+                System.out.println(sisuAr.get(i));
+                kuuKokkuvõte.add(Double.parseDouble(sisuAr.get(i)));
+
             }
-            System.out.println("Kuu kokkuvõte on " + hetkeKuuKokkuvõte.stream().mapToDouble(Double::doubleValue).sum() + " eurot.");
-        }
-        else {
-            System.out.println("Etteantud kuu, \"" + kuupäev + "\", kohta ei leitud failist andmeid.");
+            System.out.println("Kuu kokkuvõte on " + kuuKokkuvõte.stream().mapToDouble(Double::doubleValue).sum() + " eurot.");
+        } else {
+            System.out.println("\nEtteantud kuu, \"" + kuupäev + "\", kohta ei leitud failist andmeid.");
         }
     }
 

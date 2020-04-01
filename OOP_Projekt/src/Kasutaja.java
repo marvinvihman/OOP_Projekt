@@ -1,6 +1,6 @@
 public class Kasutaja {
     private String kasutajanimi;
-    private String failitee;
+    private Päevik päevik;
 
     public Kasutaja() {
     }
@@ -13,6 +13,14 @@ public class Kasutaja {
         this.kasutajanimi = kasutajanimi;
     }
 
+    public Päevik getPäevik() {
+        return päevik;
+    }
+
+    public void setPäevik(Päevik päevik) {
+        this.päevik = päevik;
+    }
+
     public void looKasutajanimi(String eesnimi, String perenimi) {
         if (eesnimi.contains("-")) {
             String[] eesnimed = eesnimi.split("-");
@@ -21,7 +29,6 @@ public class Kasutaja {
             this.kasutajanimi = eesnimi + perenimi + (int) (Math.random() * 100 + 1);
         }
     }
-
 
     public String looFailitee(String kasutajanimi) {
         return kasutajanimi + ".txt";

@@ -40,11 +40,13 @@ public class Main {
             int uusFail = JOptionPane.showConfirmDialog(null, "Kas soovite luua uue faili?");
 
             if (uusFail == 0) {
+                fail.delete();
                 fail.createNewFile();
             } else if (uusFail == 1) {
                 String olemasolevKasutajanimi = JOptionPane.showInputDialog("Sisestage oma kasutajanimi: ");
                 k1.setKasutajanimi(olemasolevKasutajanimi);
             }
+
         } else {
             fail.createNewFile();
         }

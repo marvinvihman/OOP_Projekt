@@ -21,6 +21,12 @@ public class Kasutaja {
         this.päevik = päevik;
     }
 
+    /**
+     * Kasutatakse kasutajanime loomiseks eesnime ja perenime järgi.
+     * Kasutajanimeks saab eesnimi ja perekonnanimi ilma tühikuta ja sellele lisatakse suvaline number vahemikust 1-100
+     * @param eesnimi kasutaja sisestatud eesnimi.
+     * @param perenimi kasutaja sisestatud perenimi.
+     */
     public void looKasutajanimi(String eesnimi, String perenimi) {
         if (eesnimi.contains("-")) {
             String[] eesnimed = eesnimi.split("-");
@@ -30,6 +36,11 @@ public class Kasutaja {
         }
     }
 
+    /**
+     * Luuakse failitee kasutajanimega ning tekstifaili formaadi lõpuga.
+     * @param kasutajanimi antakse ette kasutaja kasutajanimi.
+     * @return tagastab failitee.
+     */
     public String looFailitee(String kasutajanimi) {
         return kasutajanimi + ".txt";
     }

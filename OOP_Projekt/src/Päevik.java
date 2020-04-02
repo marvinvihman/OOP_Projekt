@@ -78,15 +78,39 @@ public class Päevik {
         List<Double> kuuKokkuvõte = new ArrayList<Double>();
         List<String> sisuAr = failiSisu();
 
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
+
+        //Kui kuupäev on failis olemas, siis toimib, vastasel korral väljastab sõnumi selle kohta.
         if (sisuAr.contains(kuupäev)) {
             int i = sisuAr.indexOf(kuupäev);
             System.out.println("\n" + sisuAr.get(i));
-            while (!sisuAr.get(i + 1).equals("")) {
-                i++;
-                if (sisuAr.size() - 1 == i) break;
-                System.out.println(sisuAr.get(i));
-                kuuKokkuvõte.add(Double.parseDouble(sisuAr.get(i)));
+            i++;
 
+            //Kui otsitav kuupäev on hetke kuu.
+            if (date.format(formatter).equals(kuupäev)){
+                while (sisuAr.size() > i) {
+                    try{
+                        kuuKokkuvõte.add(Double.parseDouble(sisuAr.get(i)));
+                    } catch (NumberFormatException e){
+                        break;
+                    }
+                    System.out.println(sisuAr.get(i));
+                    i++;
+                }
+            }
+            //Kui otsitav kuu on muu kuu.
+            else {
+                //Kuid eraldab tühi rida.
+                while (!sisuAr.get(i).equals("")) {
+                    try{
+                        kuuKokkuvõte.add(Double.parseDouble(sisuAr.get(i)));
+                    } catch (NumberFormatException e){
+                        break;
+                    }
+                    System.out.println(sisuAr.get(i));
+                    i++;
+                }
             }
             System.out.println("Kuu kokkuvõte on " + kuuKokkuvõte.stream().mapToDouble(Double::doubleValue).sum() + " eurot.");
         } else {
